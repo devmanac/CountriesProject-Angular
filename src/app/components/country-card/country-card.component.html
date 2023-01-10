@@ -1,0 +1,11 @@
+<div (click)="selectCountry()" class="card-outer-curve surround-shadow" data-testid="country-card">
+    <div><img [src]="country.flags.png" class="flag-dimensions flag-outer-curve" alt="flag"></div>
+    <table class="country-name-spacing element-dimension" [ngClass]="['text-' + currentTheme, 'element-' + currentTheme]">
+        <tr class="font-bolder country-name">
+            <span class="details-margin"><b>{{country.name.common}}</b></span>
+        </tr>
+        <tr class=" details-font"><span class="details-margin font-bold">Population:</span> {{country.population}}</tr>
+        <tr class=" details-font"><span class="details-margin font-bold">Region: </span>{{country.region}}</tr>
+        <tr class="bottom-row-height details-font"><span class="details-margin font-bold">Capital: </span>{{country.capital}}</tr>
+    </table>
+</div>

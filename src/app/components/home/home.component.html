@@ -1,0 +1,28 @@
+<div class="outer-div" [ngClass]="'background-' + currentTheme">
+    <div class="top-filter-elements">
+        <div class="input-width" [ngClass]="'background-' + currentTheme">
+            <div class="input-icons">
+                <i class="fa fa-search icon icon-font" [ngClass]="'text-' + currentTheme"></i>
+                <input class="input-field"
+                    [ngClass]="['background-' + currentTheme, 'element-' + currentTheme, 'text-' + currentTheme]"
+                    [(ngModel)]="searchValue" (ngModelChange)="onSearchValueChange($event)"
+                    placeholder="Search for a country..."
+                    data-testid = "country-search">
+            </div>
+        </div>
+        <div>
+            <select (change)="getCountriesByRegion()" [(ngModel)]="selectedRegion" class="dropdown-filter"
+                [ngClass]="['background-' + currentTheme, 'element-' + currentTheme, 'text-' + currentTheme]"
+                data-testid = "region-search">
+                <option value="" selected disabled hidden>Filter by Region</option>
+                <option *ngFor="let region of regions" [value]="region">{{region}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="grid">
+        <ng-container *ngFor="let country of filteredCountries | async">
+            <app-country-card [country]="country" class="card-width"></app-country-card>
+        </ng-container>
+    </div>
+</div>

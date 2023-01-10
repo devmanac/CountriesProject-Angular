@@ -1,0 +1,71 @@
+@media (min-width:1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 4rem;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:800px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 4rem;
+        justify-content: center;
+    }
+}
+
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.icon {
+    padding: 15px 15px 15px 25px;
+    min-width: 40px;
+}
+  
+.input-field {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px 10px 10px 60px;
+    border: none;
+    border-radius: 3px;
+}
+
+.top-filter-elements {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.dropdown-filter {
+    width: 150px;
+    padding: 11px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.icon-font {
+    font-size: 1rem;
+}
+
+.outer-div {
+    padding: 2rem 6rem 6rem 6rem;
+}
+
+.card-width {
+    width: 20rem;
+}
+
+.input-width {
+    max-width: 37rem;
+}
+

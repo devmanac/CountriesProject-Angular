@@ -1,0 +1,9 @@
+<div class="header-elements header" [ngClass]="'element-' + currentTheme" data-testid="header">
+   <div [ngClass]="'text-' + currentTheme">Where in the world?</div>
+   <div (click)="changeTheme()" data-testid="theme-changer">
+      <i class="fas fa-moon icon-dimension" [ngClass]="'text-' + currentTheme"></i>
+      <span class="theme-text" 
+            [ngClass]="'text-' + currentTheme">{{'  ' + themeMode}}
+      </span>
+   </div>
+</div>

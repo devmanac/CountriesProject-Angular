@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import './colors';
+
+html,
+body,
+input,
+select,
+button {
+    font-size: 62.5%;
+    font-family: 'Nunito Sans';
+}
+
+.background-dark-mode {
+    background-color: $very-dark-blue;
+}
+
+.background-light-mode {
+    background-color: $very-light-gray;
+}
+
+.element-dark-mode {
+    background-color: $dark-blue;
+}
+
+.element-light-mode {
+    background-color: $white;
+}
+
+.text-dark-mode {
+    color: $white;
+}
+
+.text-light-mode {
+    color: $very-dark-blue-light-mode;
+}
+
+.input-light-mode {
+    color: $dark-gray;
+}
+
+.font-normal {
+    font-weight: 300;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-bolder {
+    font-weight: 900;
+}
+
+.surround-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

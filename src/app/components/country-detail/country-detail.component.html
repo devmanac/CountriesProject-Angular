@@ -1,0 +1,41 @@
+<div [ngClass]="'background-' + currentTheme">
+    <div class="outer-div" [ngClass]="['background-' + currentTheme, 'text-' + currentTheme]">
+        <div class="back-button-spacing">
+            <button [ngClass]="['element-' + currentTheme, 'text-' + currentTheme]" 
+                class="back-button  surround-shadow"
+                (click)="goToHomePage()"
+                data-testid="back-button">
+                <i class="fa fa-long-arrow-left icon icon-font icon-padding"></i>Back</button>
+        </div>
+        <div class="grid-container grid-width">
+            <div class="item-flag">
+                <img *ngIf="flagImage" [src]="flagImage" class="flag-dimensions" alt="flag">
+            </div>
+            <div class="country-name name-position">
+                {{commonName}}
+            </div>
+            <div class="details-section flex-orient">
+                <div>
+                    <div class="details-spacing"><span class="font-bold">Native Name:</span> {{nativeName}}</div>
+                    <div class="details-spacing"><span class="font-bold">Population:</span> {{population}}</div>
+                    <div class="details-spacing"><span class="font-bold">Region:</span> {{region}}</div>
+                    <div class="details-spacing"><span class="font-bold">Sub Region:</span> {{subregion}}</div>
+                    <div class="details-spacing"><span class="font-bold">Capital:</span> {{capital}}</div>
+                </div>
+                <div class="details-gap">
+                    <div class="details-spacing"><span class="font-bold">Top Level Domain:</span> {{tld}}</div>
+                    <div class="details-spacing"><span class="font-bold">Currencies:</span> {{currencies}}</div>
+                    <div class="details-spacing"><span class="font-bold">Languages:</span> {{languages}}</div>
+                </div>
+            </div>
+            <div *ngIf="borderCountries"><span class="border-label font-bold">Border Countries:</span>
+                <button [ngClass]="['element-' + currentTheme, 'text-' + currentTheme]" 
+                        class="border-countries surround-shadow"
+                        *ngFor="let country of borderCountries" (click)="getAnotherCountry(country)"
+                        data-testid="border-country">
+                    {{country.name.common}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
